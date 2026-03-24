@@ -32,7 +32,14 @@ Run a terminal command to check Python is available:
 python --version
 ```
 
-If Python is not found, tell the user to install Python 3.11 or later from https://www.python.org and come back.
+If that fails, try:
+
+```
+python3 --version
+```
+
+Use whichever command works for the rest of this guide.
+If neither is found, tell the user to install Python 3.11 or later from https://www.python.org and come back.
 
 ### Step 2 — Ensure Jupyter support
 
@@ -116,7 +123,7 @@ Use the `configure_python_notebook` tool with the path recorded in Step 3.
 If the tool is unavailable, instruct the user manually:
 - Open `my_first_analysis.ipynb`
 - Click the kernel selector in the top-right corner of the notebook
-- Choose the Python interpreter whose path was printed in Step 2
+- Choose the Python interpreter whose path was printed in Step 3
 - Avoid selecting any venv or conda environment unless molass was installed there
 
 Confirm the kernel is set before proceeding.
