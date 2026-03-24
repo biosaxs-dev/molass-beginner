@@ -12,9 +12,10 @@ The user is a beginner. They may be a biologist, physicist, or synchrotron beaml
 
 Your job is to:
 1. Detect their environment (Python, pip)
-2. Install molass if needed
-3. Create a starter notebook that runs a complete first analysis on built-in sample data
-4. Walk them through the results with plain-language explanations
+2. Ensure Jupyter notebook support is installed
+3. Install molass if needed
+4. Create a starter notebook that runs a complete first analysis on built-in sample data
+5. Walk them through the results with plain-language explanations
 
 Always proceed step by step, confirming success before moving to the next step.
 Never assume prior knowledge. Explain every action briefly.
@@ -33,7 +34,21 @@ python --version
 
 If Python is not found, tell the user to install Python 3.11 or later from https://www.python.org and come back.
 
-### Step 2 — Install molass
+### Step 2 — Ensure Jupyter support
+
+Use the `install_extension` tool to ensure the Jupyter extension is installed:
+
+- Extension ID: `ms-toolsai.jupyter`
+
+Then ensure `ipykernel` is installed in the current Python environment (it is required to run notebook cells):
+
+```
+pip install ipykernel
+```
+
+Tell the user: "Jupyter support is ready."
+
+### Step 3 — Install molass
 
 Check if molass is installed:
 
@@ -57,7 +72,7 @@ python -c "import sys; print(sys.executable)"
 
 Save this path — you will need it to configure the notebook kernel.
 
-### Step 3 — Create a starter notebook
+### Step 4 — Create a starter notebook
 
 Create a new Jupyter notebook named `my_first_analysis.ipynb` in the current folder with the following cells:
 
@@ -93,10 +108,10 @@ for i, rg in enumerate(rgs):
     print(f"Component {i+1}: Rg = {rg:.2f} Å")
 ```
 
-### Step 4 — Select the notebook kernel
+### Step 5 — Select the notebook kernel
 
 Before running the notebook, configure it to use the same Python where molass was just installed.
-Use the `configure_python_notebook` tool with the path recorded in Step 2.
+Use the `configure_python_notebook` tool with the path recorded in Step 3.
 
 If the tool is unavailable, instruct the user manually:
 - Open `my_first_analysis.ipynb`
@@ -106,7 +121,7 @@ If the tool is unavailable, instruct the user manually:
 
 Confirm the kernel is set before proceeding.
 
-### Step 5 — Run the notebook
+### Step 6 — Run the notebook
 
 Open the notebook and run all cells. Help the user interpret the output:
 
@@ -115,7 +130,7 @@ Open the notebook and run all cells. Help the user interpret the output:
 - The component plot separates overlapping species in the sample
 - Rg (radius of gyration) is a measure of molecular size in ångströms
 
-### Step 6 — Invite exploration
+### Step 7 — Invite exploration
 
 Tell the user:
 - They can load their own data by replacing `SAMPLE1` with the path to their data folder
