@@ -15,7 +15,7 @@ The agent will guide you from there — no prior knowledge required.
 After the initial setup, here are example phrases to continue:
 
 **Load data**
-> "Run the analysis on SAMPLE1"  
+> "Run the analysis on SAMPLE2"  
 > "I have my own data in `/path/to/my/data` — can you load it?"  
 > "What other sample datasets are available in molass_data?"
 
