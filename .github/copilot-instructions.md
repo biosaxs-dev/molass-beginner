@@ -78,7 +78,7 @@ py -c "import molass; print(molass.__version__)"
 If not installed (ImportError), install it:
 
 ```
-py -m pip install -U molass
+py -m pip install -U molass molass_data
 ```
 
 Then verify again. Tell the user which version was installed.
@@ -163,7 +163,7 @@ Tell the user:
 - **molass** analyzes SEC-SAXS data: size-exclusion chromatography coupled with small-angle X-ray scattering
 - Data is a 2D matrix: rows = q values (scattering angle), columns = elution frames (time)
 - The standard workflow: Load → Trim → Correct baseline → Decompose → Guinier analysis
-- Sample data (`molass_data`) is installed automatically with molass
+- Sample data (`molass_data`) is a separate package — installed explicitly alongside molass in Step 3
 - All molass classes: `SecSaxsData`, `XrData`, `UvData` — the main entry point is always `SecSaxsData`
 
 ---
