@@ -26,20 +26,28 @@ Never assume prior knowledge. Explain every action briefly.
 
 ### Step 1 — Check Python
 
-Run a terminal command to check Python is available:
+On **Windows**, try the Python Launcher first. It is installed by the official Python installer and bypasses the Windows Store alias that causes a "select application" popup:
+
+```
+py --version
+```
+
+If that works, use `py` (and `py -m pip`) for all remaining steps.
+
+If `py` is not found, try:
 
 ```
 python --version
 ```
 
-If that fails, try:
+On **Linux/macOS**, try:
 
 ```
 python3 --version
 ```
 
-Use whichever command works for the rest of this guide.
-If neither is found, tell the user to install Python 3.11 or later from https://www.python.org and come back.
+Use whichever command succeeds (`py`, `python`, or `python3`) for all subsequent steps.
+If none works, tell the user to install Python 3.11 or later from https://www.python.org and come back.
 
 ### Step 2 — Ensure Jupyter support
 
@@ -50,8 +58,10 @@ Use the `install_extension` tool to ensure the Jupyter extension is installed:
 Then ensure `ipykernel` is installed in the current Python environment (it is required to run notebook cells):
 
 ```
-pip install ipykernel
+py -m pip install ipykernel
 ```
+
+(Replace `py` with `python` or `python3` depending on which worked in Step 1.)
 
 Tell the user: "Jupyter support is ready."
 
@@ -60,21 +70,23 @@ Tell the user: "Jupyter support is ready."
 Check if molass is installed:
 
 ```
-python -c "import molass; print(molass.__version__)"
+py -c "import molass; print(molass.__version__)"
 ```
+
+(Replace `py` with `python` or `python3` depending on which worked in Step 1.)
 
 If not installed (ImportError), install it:
 
 ```
-pip install -U molass
+py -m pip install -U molass
 ```
 
 Then verify again. Tell the user which version was installed.
 
-Also record the Python executable path for use in Step 4:
+Also record the Python executable path for use in Step 5:
 
 ```
-python -c "import sys; print(sys.executable)"
+py -c "import sys; print(sys.executable)"
 ```
 
 Save this path — you will need it to configure the notebook kernel.
