@@ -1,6 +1,6 @@
 # molass-beginner
 
-An Agent-mode onboarding repository for new molass users.
+An Agent-mode onboarding repository for new [molass](https://github.com/biosaxs-dev/molass-library) users.
 
 Open this folder in VS Code with GitHub Copilot, then simply say:
 
