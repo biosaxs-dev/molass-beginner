@@ -78,10 +78,16 @@ py -c "import molass; print(molass.__version__)"
 If not installed (ImportError), install it:
 
 ```
-py -m pip install -U molass molass_data
+py -m pip install -U molass
 ```
 
 Then verify again. Tell the user which version was installed.
+
+Also install `molass_data` — it provides the sample datasets used in the starter notebook:
+
+```
+py -m pip install -U molass_data
+```
 
 Also record the Python executable path for use in Step 5:
 
