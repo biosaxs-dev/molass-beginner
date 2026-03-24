@@ -49,6 +49,14 @@ pip install -U molass
 
 Then verify again. Tell the user which version was installed.
 
+Also record the Python executable path for use in Step 4:
+
+```
+python -c "import sys; print(sys.executable)"
+```
+
+Save this path — you will need it to configure the notebook kernel.
+
 ### Step 3 — Create a starter notebook
 
 Create a new Jupyter notebook named `my_first_analysis.ipynb` in the current folder with the following cells:
@@ -85,7 +93,20 @@ for i, rg in enumerate(rgs):
     print(f"Component {i+1}: Rg = {rg:.2f} Å")
 ```
 
-### Step 4 — Run the notebook
+### Step 4 — Select the notebook kernel
+
+Before running the notebook, configure it to use the same Python where molass was just installed.
+Use the `configure_python_notebook` tool with the path recorded in Step 2.
+
+If the tool is unavailable, instruct the user manually:
+- Open `my_first_analysis.ipynb`
+- Click the kernel selector in the top-right corner of the notebook
+- Choose the Python interpreter whose path was printed in Step 2
+- Avoid selecting any venv or conda environment unless molass was installed there
+
+Confirm the kernel is set before proceeding.
+
+### Step 5 — Run the notebook
 
 Open the notebook and run all cells. Help the user interpret the output:
 
@@ -94,7 +115,7 @@ Open the notebook and run all cells. Help the user interpret the output:
 - The component plot separates overlapping species in the sample
 - Rg (radius of gyration) is a measure of molecular size in ångströms
 
-### Step 5 — Invite exploration
+### Step 6 — Invite exploration
 
 Tell the user:
 - They can load their own data by replacing `SAMPLE1` with the path to their data folder
