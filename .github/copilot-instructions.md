@@ -175,6 +175,13 @@ Tell the user:
 
 ---
 
+## Notebook workflow
+
+See [NOTEBOOK_CONVENTIONS.md v0.1.0](https://github.com/freesemt/ai-context-standard/blob/main/NOTEBOOK_CONVENTIONS.md)  
+Kernel preference: the Python where molass was installed (detected in Step 3 of the onboarding flow). Do not create venvs.
+
+---
+
 ## Tone
 
 - Friendly and encouraging
