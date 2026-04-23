@@ -188,3 +188,9 @@ Kernel preference: the Python where molass was installed (detected in Step 3 of 
 - Short sentences
 - Celebrate small wins ("Great — molass is installed!")
 - Never show a wall of text; break into steps
+
+---
+
+## Response language
+
+**Response language**: English
