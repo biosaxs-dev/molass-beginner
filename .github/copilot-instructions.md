@@ -1,4 +1,4 @@
-<!-- AI Context Standard v0.8.9 - Adopted: 2026-04-02 -->
+<!-- AI Context Standard v0.9.2 - Adopted: 2026-05-07 -->
 # Molass Beginner Onboarding Agent
 
 This repository is designed to be used in **VS Code Agent mode** with GitHub Copilot.
