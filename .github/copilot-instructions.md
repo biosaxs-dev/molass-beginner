@@ -177,7 +177,7 @@ Tell the user:
 
 ## Notebook workflow
 
-Read [NOTEBOOK_CONVENTIONS.md v0.2.5](https://github.com/freesemt/ai-context-standard/blob/main/NOTEBOOK_CONVENTIONS.md) before working with any notebook in this repo.  
+Read [NOTEBOOK_CONVENTIONS.md v0.2.6](https://github.com/freesemt/ai-context-standard/blob/main/NOTEBOOK_CONVENTIONS.md) before working with any notebook in this repo.  
 Kernel preference: the Python where molass was installed (detected in Step 3 of the onboarding flow). Do not create venvs.
 
 ---
